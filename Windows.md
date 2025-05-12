@@ -9,3 +9,6 @@
 ## Diagnóstico
 - mdsched # Verifica e restaura a memória RAM
 - chkdsk /r /f # Verifica e restaura partições
+
+## CMD
+- taskkil /im programa.exe /f # Finaliza um programa de forma forçada
