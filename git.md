@@ -9,6 +9,14 @@
 - git remote add origin git@github.com:HSP303/3386-git-github-projeto_inicial.git # Sincroniza o local repo com o remote repo **(É feito somente uma vez)**
 - git push -u origin main # Aplica as alterações no reposítorio remoto
 
+## Remote
+
+- git remote add apelido url # estabelece a conexão de um repositório local com um remoto
+- git remote -v # Lista os repositórios remotos com suas respectivas URLs
+- git remote remove origin # Esse comando remove um repositório remoto
+- git remote set-url origin https://github.com/seu-usuario/seu-repositorio.git # Modifica a url de um repositório remoto
+- git remote rename origin novo-origin
+
 ## Comandos de Manutenção
 
 - git reset --keep HEAD@{1} # Reverte um pull, quardando os commits realizados anteriormente
