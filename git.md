@@ -1,6 +1,3 @@
-TESTANDO O REVERT
-
-
 # GIT
 
 ## Inicialização de Repositório
@@ -21,12 +18,5 @@ TESTANDO O REVERT
 - git remote rename origin novo-origin
 
 ## Comandos de Manutenção
-
-- git clone url
-- git status # Mostra mudanças nos arquivos do projeto e quais ações foram feitas com eles
-- git log # Mostra o histórico de commits
-- git pull origin main # Pegas os commits do repositório remoto e baixa no local
-
-## Comandos de Manutenção Específicos
 
 - git reset --keep HEAD@{1} # Reverte um pull, quardando os commits realizados anteriormente
