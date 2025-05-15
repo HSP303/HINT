@@ -23,6 +23,11 @@
 - git status # Mostra mudanças nos arquivos do projeto e quais ações foram feitas com eles
 - git log # Mostra o histórico de commits
 - git pull origin main # Pegas os commits do repositório remoto e baixa no local
+- git commit --amend -m "Nova mensagem do commit" # Altera a mensagem do último commit
+## Desfazer
+
+- git revert id_commit # Reverte o commit especificado pelo id. **OBS: O comando "git log" mostra o id do commit**
+- git reset --hard id_commit_anterior # deleta um commit, inclusive o log, e todas as modificações nos códigos referentes ao commit.
 
 ## Comandos de Manutenção Específicos
 
