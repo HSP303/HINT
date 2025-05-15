@@ -1,6 +1,3 @@
-TESTANDO O REVERT
-
-
 # GIT
 
 ## Inicialização de Repositório
