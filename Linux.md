@@ -31,11 +31,11 @@
 - systemd-analyze # Mostra o tempo de inicialização do computador
 - systemd-analyze # Mostra o que está consumindo tempo de inicialização
 
-## Outros
+## Services
 - brightnessctl set 100% # seta a luminozidade da tela
 - sudo systemctl restart display-manager # logout
 - sudo update-alternatives --config java # Mostra caminho onde a aplicação java está instalada
 - ip link set wlan down; iw wlan set type managed; ip link set wlan up # Desabilitar o monitor mode da placa de rede
-
+- systemctl --user restart pipewire pipewire-pulse # Reinicia o sistema de áudio
 
 
