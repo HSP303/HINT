@@ -37,5 +37,13 @@
 - sudo update-alternatives --config java # Mostra caminho onde a aplicação java está instalada
 - ip link set wlan down; iw wlan set type managed; ip link set wlan up # Desabilitar o monitor mode da placa de rede
 - systemctl --user restart pipewire pipewire-pulse # Reinicia o sistema de áudio
+- xrandr --output HDMI-1 --auto --same-as eDP-1 # Espelhar tela com projetor via HDMI
+- xrandr --output HDMI-1 --auto --right-of eDP-1 # Estender a tela com projeto via HDMI
+- xrandr --output HDMI-1 --mode 1920x1080 # Alterar resolução 
+- xrandr --output HDMI-1 --off  # Parar compartilhamento
 
-
+## Outro
+- Ambiente Python
+$ python3 -m venv meu_ambiente
+$ source meu_ambiente/bin/activate
+$ pip install pacote
