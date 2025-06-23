@@ -6,6 +6,7 @@
 - gdb arquivo # Engenharia reversa
 - grep -r "name" # procura todos os arquivos com a string "name"
 - grep recursivo: grep -rnw STRING /local/inicio
+- curl ifconfig.me # mostra o IP público
 
 ## WIFI-BLUETOOTH
 
@@ -42,13 +43,13 @@
 - xrandr --output HDMI-1 --mode 1920x1080 # Alterar resolução 
 - xrandr --output HDMI-1 --off  # Parar compartilhamento
 
-<<<<<<< HEAD
+
 ## Outro
 - Ambiente Python
 $ python3 -m venv meu_ambiente
 $ source meu_ambiente/bin/activate
 $ pip install pacote
-=======
+
 ## IPtables
 
 ### Filtrar Por País
