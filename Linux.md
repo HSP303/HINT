@@ -42,8 +42,22 @@
 - xrandr --output HDMI-1 --mode 1920x1080 # Alterar resolução 
 - xrandr --output HDMI-1 --off  # Parar compartilhamento
 
+<<<<<<< HEAD
 ## Outro
 - Ambiente Python
 $ python3 -m venv meu_ambiente
 $ source meu_ambiente/bin/activate
 $ pip install pacote
+=======
+## IPtables
+
+### Filtrar Por País
+- 1. Criar ipset com IPs do Brasil (atualizado)
+sudo ipset -N br-ips hash:net
+sudo wget -O /tmp/br.zone http://www.ipdeny.com/ipblocks/data/countries/br.zone
+while read ip; do sudo ipset add br-ips $ip; done < /tmp/br.zone
+
+- 2. PERMITIR apenas IPs do Brasil na porta 80 (FILTER)
+sudo iptables -A INPUT -p tcp --dport 80 -m set ! --match-set br-ips src -j DROP  # Bloqueia não-BR
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT  # Libera BR
+
