@@ -42,7 +42,14 @@
 - xrandr --output HDMI-1 --auto --right-of eDP-1 # Estender a tela com projeto via HDMI
 - xrandr --output HDMI-1 --mode 1920x1080 # Alterar resolução 
 - xrandr --output HDMI-1 --off  # Parar compartilhamento
+- sudo lsof -i -P -n | grep LISTEN # serviços rodando nas portas
+- sudo kill -9 PID  # mata o processo via PID
 
+## User
+- sudo adduser username # cria um usuário com a home
+- sudo moduser -aG sudo username # adiciona o usuário ao grupo sudo
+- sudo passwd username # altera a senha do usuário
+- sudo deluser --remove-home username # deleta o usuário e sua home
 
 ## Outro
 - Ambiente Python
