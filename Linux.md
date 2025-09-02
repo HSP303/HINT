@@ -7,6 +7,11 @@
 - grep -r "name" # procura todos os arquivos com a string "name"
 - grep recursivo: grep -rnw STRING /local/inicio
 - curl ifconfig.me # mostra o IP público
+### Definir app executador
+	- adicionar no inicio do arquivo: #!/usr/bin/env python3
+	- chmod +x nome_arquivo
+	- mv nome_arquivo /bin
+
 
 ## WIFI-BLUETOOTH
 
