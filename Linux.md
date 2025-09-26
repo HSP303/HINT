@@ -43,10 +43,14 @@
 - sudo update-alternatives --config java # Mostra caminho onde a aplicação java está instalada
 - ip link set wlan down; iw wlan set type managed; ip link set wlan up # Desabilitar o monitor mode da placa de rede
 - systemctl --user restart pipewire pipewire-pulse # Reinicia o sistema de áudio
+### Monitors
 - xrandr --output HDMI-1 --auto --same-as eDP-1 # Espelhar tela com projetor via HDMI
 - xrandr --output HDMI-1 --auto --right-of eDP-1 # Estender a tela com projeto via HDMI
 - xrandr --output HDMI-1 --mode 1920x1080 # Alterar resolução 
 - xrandr --output HDMI-1 --off  # Parar compartilhamento
+- xrandr --output HDMI-1 --rotate normal # Rotaciona o monitor (normal, inverted, left, right)
+- xrandr --output eDP-1 --right-of HDMI-1 # Ordena os monitores
+
 - sudo lsof -i -P -n | grep LISTEN # serviços rodando nas portas
 - sudo kill -9 PID  # mata o processo via PID
 
@@ -67,7 +71,7 @@ $ pip install pacote
 ### Filtrar Por País
 - 1. Criar ipset com IPs do Brasil (atualizado)
 sudo ipset -N br-ips hash:net
-sudo wget -O /tmp/br.zone http://www.ipdeny.com/ipblocks/data/countries/br.zone
+- sudo wget -O /tmp/br.zone http://www.ipdeny.com/ipblocks/data/countries/br.zone
 while read ip; do sudo ipset add br-ips $ip; done < /tmp/br.zone
 
 - 2. PERMITIR apenas IPs do Brasil na porta 80 (FILTER)
