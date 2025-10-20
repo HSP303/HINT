@@ -54,6 +54,10 @@
 - sudo lsof -i -P -n | grep LISTEN # serviços rodando nas portas
 - sudo kill -9 PID  # mata o processo via PID
 
+## Configs
+- setxkbmap -layout us -variant intl
+- setxkbmap -option compose:rctrl
+
 ## User
 - sudo adduser username # cria um usuário com a home
 - sudo moduser -aG sudo username # adiciona o usuário ao grupo sudo
