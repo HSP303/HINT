@@ -19,6 +19,7 @@
 - iptables -t nat PREROUTING -i eth1 -j REDIRECT # Redirecionamento no Servidor
 - route ADD 0.0.0.0 MASK 255.255.255.255 10.0.0.1 # Redirecionamento para o servidor Windows
 - sudo systemctl restart networking # Reinicia o serviço de rede do Debian
+- sudo ip route add 192.168.0.0/24 via 172.16.40.254 dev tun0
 
 ## PARTITION
 
