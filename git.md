@@ -28,6 +28,7 @@
 
 - git revert id_commit # Reverte o commit especificado pelo id. **OBS: O comando "git log" mostra o id do commit**
 - git reset --hard id_commit_anterior # deleta um commit, inclusive o log, e todas as modificações nos códigos referentes ao commit.
+- git revert --no-commit id-commit-antigo..HEAD # Volta o código em um commit específico deixando os logs.
 
 ## Comandos de Manutenção Específicos
 

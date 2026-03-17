@@ -16,10 +16,12 @@
 ## WIFI-BLUETOOTH
 
 - nmcli dev wifi connect Nome_rede password senha123 # Conectar em uma rede wifi
+- nmcli dev wifi show-password
 - iptables -t nat PREROUTING -i eth1 -j REDIRECT # Redirecionamento no Servidor
 - route ADD 0.0.0.0 MASK 255.255.255.255 10.0.0.1 # Redirecionamento para o servidor Windows
 - sudo systemctl restart networking # Reinicia o serviço de rede do Debian
 - sudo ip route add 192.168.0.0/24 via 172.16.40.254 dev tun0
+- pkill -f chrome | google-chrome --proxy-server="http://127.0.0.1:8080" # Comando para iniciar com o proxy configurado
 
 ## PARTITION
 
