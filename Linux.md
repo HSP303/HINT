@@ -46,6 +46,7 @@
 - sudo update-alternatives --config java # Mostra caminho onde a aplicação java está instalada
 - ip link set wlan down; iw wlan set type managed; ip link set wlan up # Desabilitar o monitor mode da placa de rede
 - systemctl --user restart pipewire pipewire-pulse # Reinicia o sistema de áudio
+
 ### Monitors
 - xrandr --output HDMI-1 --auto --same-as eDP-1 # Espelhar tela com projetor via HDMI
 - xrandr --output HDMI-1 --auto --right-of eDP-1 # Estender a tela com projeto via HDMI
@@ -60,6 +61,10 @@
 ## Configs
 - setxkbmap -layout us -variant intl
 - setxkbmap -option compose:rctrl
+
+## System
+- echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf # aumenta a quantidade de arquivos assistidos pelo sistema
+- sudo sysctl -p # aplica as modificações do arquivo /etc/sysctl.conf
 
 ## User
 - sudo adduser username # cria um usuário com a home
