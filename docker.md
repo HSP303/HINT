@@ -15,3 +15,7 @@
 - docker stop idnome do container # para o processo de um container
 - docker rm # Remove o container
 
+### Deletar tudo
+sudo docker container ls -aq | xargs -r sudo docker rm -f
+sudo docker system prune -a --volumes -f
+sudo docker builder prune -a -f

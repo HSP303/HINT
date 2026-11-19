@@ -3,6 +3,7 @@
 ## Arquivos
 
 - tar -xvzf nome_arquivo.tar.gz # Download de arquivo tar.gz
+- tar -czf arquivo_compactado.tar.gz pasta/
 - gdb arquivo # Engenharia reversa
 - grep -r "name" # procura todos os arquivos com a string "name"
 - grep recursivo: grep -rnw STRING /local/inicio
@@ -61,6 +62,8 @@
 ## Configs
 - setxkbmap -layout us -variant intl
 - setxkbmap -option compose:rctrl
+- echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc
+source ~/.bashrc # To add a dir to the path
 
 ## System
 - echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf # aumenta a quantidade de arquivos assistidos pelo sistema
@@ -77,6 +80,7 @@
 $ python3 -m venv meu_ambiente
 $ source meu_ambiente/bin/activate
 $ pip install pacote
+- openssl rand -hex 32 # comando para criar uma secret
 
 ## IPtables
 
@@ -89,4 +93,5 @@ while read ip; do sudo ipset add br-ips $ip; done < /tmp/br.zone
 - 2. PERMITIR apenas IPs do Brasil na porta 80 (FILTER)
 sudo iptables -A INPUT -p tcp --dport 80 -m set ! --match-set br-ips src -j DROP  # Bloqueia não-BR
 sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT  # Libera BR
+
 
